@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>1Б клас - 01 СУ Пенчо Славейков</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">1Б клас</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Начало
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pay.html">Плащания</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">Инструкции</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+  var params = new window.URLSearchParams(window.location.search);
+  </script>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Плащания</h1>
+          <p class="lead">Можете да платите суми, свързани със събирането на средства за учебната и организационна дейност на класа
+              <br /> Поддържаните методи за плащане са <b>банков трансфер(IBAN), Revolut, iCard</b>
+          </p>
+        <div id="navbar-example">
+        <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#bank" role="tab">Банков трансфер</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#revolut" role="tab">Revolut</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#icard" role="tab">iCard</a>
+              </li>
+          </ul>
+
+          <!-- Tab panes {Fade}  -->
+            <div class="tab-content">
+              <div class="tab-pane fade in active show" id="bank" aria-expanded="true" name="bank" role="tabpanel">
+                  <div class="bs-callout bs-callout-danger">
+                    <h4>Детайли за плащането</h4>
+                    <table class="table-striped table">
+                      <tr>
+                        <td>Име на получателя</td>
+                        <td>Daniel Rumenov Ivanov</td>
+                      </tr>
+                      <tr>
+                        <td>IBAN</td>
+                        <td>BG90INTF40012070411912</td>
+                      </tr>
+                      <tr>
+                        <td>BIC</td>
+                        <td>BGUSBGSF</td>
+                      </tr>
+                      <tr>
+                        <td>Име на институцията</td>
+                        <td>iCard AD</td>
+                      </tr>
+                      <tr>
+                        <td>Сума за плащане</td>
+                        <td> 
+                          <script>document.write(params.get("amount"))</script> BGN
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Основание за плащане(Попълнете коректно)</td>
+                        <td>
+                          <script>document.write(params.get("ref"))</script>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+              </div>
+              <div class="tab-pane fade" id="revolut" role="tabpanel">
+                  <div class="bs-callout bs-callout-danger" id="revolut" name="revolut">
+                    <h4>Детайли за плащането</h4>
+                    <table class="table-striped table">
+                      <tr>
+                        <td>Име на получателя</td>
+                        <td>Daniel Rumenov Ivanov</td>
+                      </tr>
+                      <tr>
+                        <td>Телефонен номер</td>
+                        <td>0882440966</td>
+                      </tr>
+                      <tr>
+                        <td>Сума за плащане</td>
+                        <td>
+                          <script>document.write(params.get("amount"))</script> BGN
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Бележка за плащане(Попълнете коректно на латиница)</td>
+                        <td>
+                          <script>document.write(params.get("ref"))</script>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+              </div>
+              
+              <div class="tab-pane fade" id="icard" role="tabpanel">
+                  <div class="bs-callout bs-callout-danger" id="icard" name="icard">
+                    <h4>Детайли за плащането</h4>
+                    <table class="table-striped table">
+                      <tr>
+                        <td>Име на получателя</td>
+                        <td>Daniel Rumenov Ivanov</td>
+                      </tr>
+                      <tr>
+                        <td>Телефонен номер</td>
+                        <td>0882440966</td>
+                      </tr>
+                      <tr>
+                        <td>Сума за плащане</td>
+                        <td>
+                          <script>document.write(params.get("amount"))</script> BGN
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Бележка за плащане(Попълнете коректно на латиница)</td>
+                        <td>
+                          <script>document.write(params.get("ref"))</script>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+              </div>
+            
+            </div>
+          </div>
+
+
+          <p class="lead">Може да платите с един превод сумите за няколко деца, като съберете сумите и добавите основания, разделени с интервал(пример : 1BX1 1BX5)</b>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
